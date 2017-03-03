@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * Created by Katya on 16.02.2017.
  */
-@RequestMapping("/admin/products")
+@RequestMapping({"/admin/products", "/admin"})
 @Controller
 public class AdminProductsController {
 
@@ -89,7 +89,7 @@ public class AdminProductsController {
             productService.createProduct(price.getProduct());
             priceService.createPrice(price);
         }
-        return "redirect:/";
+        return "redirect:/admin/products/";
     }
 
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
@@ -151,7 +151,7 @@ public class AdminProductsController {
 
         productService.deleteProduct(productService.getProduct(productId));
 
-        return "redirect:/";
+        return "redirect:/admin/";
     }
 
     @RequestMapping(value = "/buy", method = RequestMethod.POST)

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ankys
@@ -12,17 +13,14 @@
         <ul class="pagination">
             <li class="${empty param.pageNumber or param.pageNumber le 1 ?'disabled':''}">
                 <a href="./">&laquo;</a>
-                <%--<input type="button" onclick="getListForPage(1)">--%>
             </li>
             <c:forEach var="i" begin="1" end="${numberOfPages}">
                 <li>
                     <a href="./list?pageNumber=${i}&amountPerPage=20">${i}</a>
-                        <%--<input type="button" onclick="getListForPage(${i})">--%>
                 </li>
             </c:forEach>
             <li class="${param.pageNumber ge numberOfPages ? 'disabled': ''}">
                 <a href="./list?pageNumber=${numberOfPages}&amountPerPage=20" >&raquo;</a>
-                <%--<input type="button" onclick="getListForPage(${numberOfPages})">--%>
             </li>
         </ul>
     </div>

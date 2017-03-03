@@ -21,7 +21,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li ${page_type.equals('products') ? 'class="active"' : ''}><a href="/index">Products</a></li>
-                        <li ${page_type.equals('tiles') ? 'class="active"' : ''}><a href="/products">Tiles</a></li>
+                        <li ${page_type.equals('tiles') ? 'class="active"' : ''}><a href="/admin/products/">Tiles</a></li>
                         <li ${page_type.equals('filter') ? 'class="active"' : ''}><a href="/filter">Filter</a></li>
                         <li ${page_type.equals('pages') ? 'class="active"' : ''}><a href="/users/">Users</a></li>
                         <li ${page_type.equals('cart') ? 'class="active"' : ''}>

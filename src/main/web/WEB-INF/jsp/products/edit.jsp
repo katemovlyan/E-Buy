@@ -16,6 +16,7 @@
 </head>
 <body>
 <%--<script type="text/javascript" src="/res/js/check_product.js"></script>onsubmit="return checkProduct()"--%>
+<%@include file="/WEB-INF/jsp/common/menu.jsp" %>
 <div class="container">
     <div class="col-md-12">
         <header class="page-header">

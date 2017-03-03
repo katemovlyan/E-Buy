@@ -72,28 +72,7 @@
             </div>
         </c:forEach>
     </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-6">
-            <ul class="pagination">
-                <li class="${empty param.pageNumber or param.pageNumber le 1 ?'disabled':''}">
-                    <a href="/">&laquo;</a>
-                    <%--<input type="button" onclick="getListForPage(1)">--%>
-                </li>
-                <c:forEach var="i" begin="1" end="${numberOfPages}">
-                    <li>
-                        <a href="${pageContext.servletContext.contextPath}/client/products/list?pageNumber=${i}&amountPerPage=20">${i}</a>
-                            <%--<input type="button" onclick="getListForPage(${i})">--%>
-                    </li>
-                </c:forEach>
-                <li class="${param.pageNumber ge numberOfPages ? 'disabled': ''}">
-                    <a href="./products?pageNumber=${numberOfPages}&amountPerPage=20">&raquo;</a>
-                    <%--<input type="button" onclick="getListForPage(${numberOfPages})">--%>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-2"></div>
-    </div>
+    <%@include file="/WEB-INF/jsp/common/pagination.jsp" %>
 </div>
 <%@include file="/WEB-INF/jsp/common/javascript.jsp" %>
 <script>

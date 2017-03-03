@@ -25,7 +25,7 @@
                     <h5>Products count <span class="label label-default">${totalProductsCount}</span></h5>
                 </div>
                 <div class="panel-body text-center">
-                    <a class="btn btn-success pull-center" href="./new">
+                    <a class="btn btn-success pull-center" href="/admin/products/new">
                         <i class="fa fa-fw fa-plus"></i>
                     </a>
                 </div>
